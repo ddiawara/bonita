@@ -94,3 +94,17 @@ BIZ_DB_PASS=custombusinesspass
 
 # CI/CD and Coding challenge
 
+
+Solved it by running a groovy script.
+
+**all_jobs.gsh**
+````groovy
+
+import jenkins.model.*
+import hudson.model.*
+Jenkins.instance.getAllItems(AbstractProject.class).each { println(it.fullName) };
+````
+
+````shell
+java -jar jenkins-cli.jar -s http://localhost:8080 groovy all_jobs.gsh --username $username --password $password > jobs.csv
+````
