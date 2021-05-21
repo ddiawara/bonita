@@ -69,9 +69,4 @@ spec:
           volumeMounts:
           - name: custom-workdir
             mountPath: /opt/custom-init.d
-#          - name: bonita-volume
-#            mountPath: "/opt/bonita"
-#      volumes:
-#      - name: bonita-volume
-#        persistentVolumeClaim:
-#          claimName: bonita-pv-claim
+
